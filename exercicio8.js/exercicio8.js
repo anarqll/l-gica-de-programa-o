@@ -1,4 +1,4 @@
-const valorPorHora = parseFloat(prompt("Quanto você ganha por hora?));
+const valorPorHora = parseFloat(prompt("Quanto você ganha por hora?"));
 const horasTrabalhadas = parseFloat(prompt("Quantas horas você trabalhou no mês?"));
 
 const salario = valorPorHora * horasTrabalhadas;
