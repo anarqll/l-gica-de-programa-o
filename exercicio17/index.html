@@ -3,47 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 17 — Loja de Tintas</title>
+    <title>Calculadora de Tinta</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖌️</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="exercicio17.css">
 </head>
-<body>
+<body class="tema-verde">
+
+    <!-- Foto do pintor no canto direito -->
+    <img src="Pintor.jpeg" class="pintor-foto" alt="">
+
+    <!-- Botões de idioma -->
+    <div class="paleta">
+        <button class="lang-btn btn-verde"    onclick="mudarIdioma('pt')">PT</button>
+        <button class="lang-btn btn-vermelho" onclick="mudarIdioma('es')">ES</button>
+        <button class="lang-btn btn-amarelo"  onclick="mudarIdioma('en')">EN</button>
+    </div>
+
     <div class="container">
 
-        <div class="input-card">
-            <div class="icones">🎨 🖌️</div>
-            <h2>Loja de Tintas</h2>
-            <p>Saiba a quantidade de tinta e o preço total para pintar sua área</p>
-            <label>Informe a área em m²</label>
-            <div class="input-grupo">
-                <input type="number" id="area" placeholder="Ex: 45" min="0">
-                <span class="unidade">m²</span>
-            </div>
-            <button onclick="calcular()">Calcular</button>
-        </div>
+            <header class="cabecalho">
+                <div class="logo">🖌️</div>
+                <h1 data-i18n="titulo">Calculadora de Tinta</h1>
+                <p data-i18n="subtitulo">Descubra a quantidade certa de tinta para pintar seu espaço</p>
+            </header>
 
-        <div class="resultados" id="resultados">
-            <div class="card">
-                <div class="card-icone">🪣</div>
-                <h3>Situação 1</h3>
-                <p class="subtitulo">Latas de 18L</p>
-                <div class="valor" id="val1"></div>
+            <div class="calc-card">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-icone">🪣</span>
+                        <span data-i18n="lata18">Lata 18L</span>
+                        <strong>R$ 80,00</strong>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icone">🫙</span>
+                        <span data-i18n="galao36">Galão 3,6L</span>
+                        <strong>R$ 25,00</strong>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icone">📐</span>
+                        <span data-i18n="coberturaLabel">Cobertura</span>
+                        <strong>6 m² / L</strong>
+                    </div>
+                </div>
+
+                <hr class="divisor">
+
+                <label class="campo-label" data-i18n="areaLabel">Área a ser pintada</label>
+                <div class="input-grupo">
+                    <input type="number" id="area" placeholder="Ex: 45" min="0">
+                    <span class="unidade">m²</span>
+                </div>
+                <p class="obs" data-i18n="obs">* Inclui 10% de margem de segurança</p>
+                <button class="btn-calcular" onclick="calcular()" data-i18n="calcular">Calcular</button>
             </div>
-            <div class="card">
-                <div class="card-icone">🫙</div>
-                <h3>Situação 2</h3>
-                <p class="subtitulo">Galões de 3,6L</p>
-                <div class="valor" id="val2"></div>
+
+            <div class="resultados" id="resultados">
+                <div class="card">
+                    <div class="card-topo">
+                        <span class="card-icone">🪣</span>
+                        <div>
+                            <h3 data-i18n="sit1titulo">Só Latas</h3>
+                            <p data-i18n="sit1sub">Latas de 18 litros</p>
+                        </div>
+                    </div>
+                    <div class="valor" id="val1"></div>
+                </div>
+                <div class="card">
+                    <div class="card-topo">
+                        <span class="card-icone">🫙</span>
+                        <div>
+                            <h3 data-i18n="sit2titulo">Só Galões</h3>
+                            <p data-i18n="sit2sub">Galões de 3,6 litros</p>
+                        </div>
+                    </div>
+                    <div class="valor" id="val2"></div>
+                </div>
+                <div class="card destaque">
+                    <div class="badge" data-i18n="menorPreco">Menor preço</div>
+                    <div class="card-topo">
+                        <span class="card-icone">🪣🫙</span>
+                        <div>
+                            <h3 data-i18n="sit3titulo">Mistura</h3>
+                            <p data-i18n="sit3sub">Latas + Galões</p>
+                        </div>
+                    </div>
+                    <div class="valor" id="val3"></div>
+                </div>
             </div>
-            <div class="card">
-                <div class="card-icone">🪣🫙</div>
-                <h3>Situação 3</h3>
-                <p class="subtitulo">Mistura — menor preço</p>
-                <div class="valor" id="val3"></div>
-            </div>
-        </div>
 
     </div>
+
     <script src="exercicio17.js"></script>
 </body>
 </html>
