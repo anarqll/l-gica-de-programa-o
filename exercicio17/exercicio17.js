@@ -138,3 +138,5 @@ function calcular() {
 
     document.getElementById('resultados').classList.add('visivel')
 }
+
+// 47.5 30.9

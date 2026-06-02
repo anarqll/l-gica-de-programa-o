@@ -22,11 +22,13 @@ body.tema-amarelo  { background-color: #fef9d7; }
     left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
-    object-position: 45% top;
     opacity: 0.25;
     z-index: 0;
     pointer-events: none;
+    object-position: 47.5% 30.9%;
+    object-fit: cover;
+    transform: scale(1.8) translate(-10%, 5%);
+    transform-origin: 47.5% 30.9%;
 }
 
 /* ── CONTAINER PRINCIPAL ── */
