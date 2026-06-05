@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eef4e8;
+    font-family: 'Nunito', sans-serif;
+    padding: 24px 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: 100%;
+    max-width: 420px;
+}
+
+/* ── FORMULÁRIO ── */
+.formulario {
+    width: 100%;
+    background-color: #4a5e3a;
+    border-radius: 20px;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 6px 20px rgba(74, 94, 58, 0.35);
+    color: white;
+}
+
+.formulario h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.input-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-grupo label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    opacity: 0.88;
+}
+
+.input-linha {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cifrao {
+    padding: 0 10px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #4a5e3a;
+    background: #d4e8c0;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+
+.input-linha input {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #2d3d22;
+}
+
+.input-linha input::placeholder {
+    color: #a0b890;
+    font-weight: 400;
+}
+
+.formulario button {
+    margin-top: 4px;
+    padding: 11px;
+    background: #d4e8c0;
+    color: #2d3d22;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.formulario button:hover {
+    background: #c2de9e;
+}
+
+/* ── BALÃO DE RESPOSTA ── */
+.balao {
+    display: none;
+    background-color: #4a5e3a;
+    color: #d4e8c0;
+    padding: 22px 32px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(74, 94, 58, 0.35);
+    line-height: 1.9;
+}
+
+.balao::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 14px 18px;
+    border-style: solid;
+    border-color: transparent transparent #4a5e3a;
+}

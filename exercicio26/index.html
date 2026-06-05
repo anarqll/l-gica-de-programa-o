@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto com menor preço</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="exercicio26.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="formulario">
+            <h2>🛒 Comparador de Preços</h2>
+
+            <div class="input-grupo">
+                <label>Produto 1</label>
+                <div class="input-linha">
+                    <span class="cifrao">R$</span>
+                    <input type="text" id="preco1" placeholder="Ex: 20,50">
+                </div>
+            </div>
+
+            <div class="input-grupo">
+                <label>Produto 2</label>
+                <div class="input-linha">
+                    <span class="cifrao">R$</span>
+                    <input type="text" id="preco2" placeholder="Ex: 15,90">
+                </div>
+            </div>
+
+            <div class="input-grupo">
+                <label>Produto 3</label>
+                <div class="input-linha">
+                    <span class="cifrao">R$</span>
+                    <input type="text" id="preco3" placeholder="Ex: 32,00">
+                </div>
+            </div>
+
+            <button onclick="calcular()">Comparar preços</button>
+        </div>
+
+        <div class="balao" id="resultado"></div>
+
+    </div>
+    <script src="exercicio26.js"></script>
+</body>
+</html>
