@@ -23,5 +23,5 @@ function calcular() {
 
     let resultado = document.getElementById('resultado')
     resultado.innerHTML = "O maior número é <strong>" + maior + "</strong><br>O menor número é <strong>" + menor + "</strong>"
-    resultado.style.display = 'block'
+    resultado.style.display = 'block' // a palavra 'block' significa uma caixa ou bloco usado para exibir uma largura inteira e é usada para exibir o resultado, caso ele esteja oculto
 }

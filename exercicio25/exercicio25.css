@@ -4,7 +4,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #eef2e8;
+    background-color: #eff8e1;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -34,30 +34,31 @@ body {
 
 .formulario input {
     padding: 10px 16px;
-    border: 2px solid #6b8f52;
+    border: 2px solid #83a46b;
     border-radius: 10px;
-    background-color: #eef2e8;
-    color: #3a4e2c;
+    background-color: #e5f7cd;
+    color: #6f895d;
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     outline: none;
+
 }
 
 .formulario input:focus {
-    border-color: #d9edc4;
+    border-color: #c9dcad;
 }
 
 .formulario input::placeholder {
-    color: #7a9467;
+    color: #5f7151;
     font-weight: 400;
 }
 
 .formulario button {
     margin-top: 4px;
     padding: 10px;
-    background-color: #d9edc4;
-    color: #3a4e2c;
+    background-color: #b2cf93;
+    color: #435735;
     border: none;
     border-radius: 10px;
     font-family: 'Nunito', sans-serif;
@@ -93,5 +94,5 @@ body {
     transform: translateX(-50%);
     border-width: 0 16px 22px;
     border-style: solid;
-    border-color: transparent transparent #4a5e3a;
+    border-color: transparent transparent #4c5d3f;
 }
