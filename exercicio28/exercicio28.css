@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #d8cb91;
+}
+
+.fundo {
+    position: fixed;
+    top: 50%;
+    right: 4%; 
+    left: auto;
+    transform: translate();Y(-90%);
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 12px;
+    color: #b06ec0;
+    opacity: 0.8;
+    z-index: -1;
+    margin: 0;
+    white-space: pre;
+
+}
