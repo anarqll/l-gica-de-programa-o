@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0b2f40;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Caixa da pergunta */
+.formulario {
+    background-color: #519eaa;
+    padding: 25px 35px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 22px 20px rgba(40, 78, 88, 0.33);
+}
+
+.formulario h2 {
+    color: rgba(27, 74, 112, 0.85);
+    margin: 0;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.formulario p {
+    color: #ffffff;
+    margin: 0 0 6px 0;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.formulario input {
+    padding: 8px 12px;
+    border: 2px solid rgba(27, 74, 112, 0.707);
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+}
+
+.formulario input:focus {
+    border-color: #0b2f40;
+}
+
+.formulario button {
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(27, 74, 112, 0.707);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #0b2f40;
+}
+
+/* Caixa redonda do resultado */
+.balao {
+    display: none;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #519eaa;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(40, 78, 88, 0.45);
+}
+
+/* Quando o JS mostra o resultado, centraliza o texto dentro do círculo */
+.balao.mostrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balao.erro {
+    background-color: #a05252;
+}
+
+/* Link "Voltar" com cara de botão */
+.voltar {
+    padding: 10px 25px;
+    border-radius: 8px;
+    background-color: rgba(27, 74, 112, 0.707);
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    background-color: #519eaa;
+}
